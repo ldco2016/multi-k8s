@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "0.18.0",
-    "jest": "24.5.0",
-    "jest-util": "24.5.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-router-dom": "4.3.1",
