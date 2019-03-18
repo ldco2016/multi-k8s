@@ -3,20 +3,20 @@ services:
   - docker
 
 before_install:
-  - docker build -t danielcortes/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t ldco2016/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run danielcortes/react-test npm run test -- --coverage
+  - docker run ldco2016/react-test npm run test -- --coverage
 
 after_success:
-  - docker build -t danielcortes/multi-client ./client
-  - docker build -t danielcortes/multi-nginx ./nginx
-  - docker build -t danielcortes/multi-server ./server
-  - docker build -t danielcortes/multi-worker ./worker
+  - docker build -t ldco2016/multi-client ./client
+  - docker build -t ldco2016/multi-nginx ./nginx
+  - docker build -t ldco2016/multi-server ./server
+  - docker build -t ldco2016/multi-worker ./worker
   # Log in to the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to Docker Hub
-  - docker push danielcortes/multi-client
-  - docker push danielcortes/multi-nginx
-  - docker push danielcortes/multi-server
-  - docker push danielcortes/multi-worker
+  - docker push ldco2016/multi-client
+  - docker push ldco2016/multi-nginx
+  - docker push ldco2016/multi-server
+  - docker push ldco2016/multi-worker
