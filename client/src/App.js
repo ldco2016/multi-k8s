@@ -9,21 +9,21 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Fib Calculator version 2.0</h1>
-            <Link to="/">Home</Link>
-            <Link to="/otherpage">Other Page</Link>
+        <div className='App'>
+          <header className='App-header'>
+            <img src={logo} className='App-logo' alt='logo' />
+            <h1 className='App-title'>Fib Calculator for Kubernetes Cluster</h1>
+            <Link to='/'>Home</Link>
+            <Link to='/otherpage'>Other Page</Link>
             <div>
-              <Route exact path="/" component={Fib} />
-              <Route exact path="/otherpage" component={OtherPage} />
+              <Route exact path='/' component={Fib} />
+              <Route exact path='/otherpage' component={OtherPage} />
             </div>
             <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
+              className='App-link'
+              href='https://reactjs.org'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               Learn React
             </a>
