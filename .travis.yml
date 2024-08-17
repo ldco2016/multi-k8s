@@ -1,4 +1,5 @@
 sudo: required
+language: generic
 services:
   - docker
 env:
@@ -18,7 +19,7 @@ before_install:
   - docker build -t ldco2016/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run ldco2016/react-test npm test -- --coverage
+  - docker run -e CI=true ldco2016/react-test npm test
 
 deploy:
   provider: script
